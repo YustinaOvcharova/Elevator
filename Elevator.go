@@ -39,7 +39,7 @@ func NewLift(count, height, speed uint, delay time.Duration) (*Lift, error) {
 		return nil, fmt.Errorf("floor count must be in range: from 5 to 10")
 	}
 	if speed > height {
-		return nil, fmt.Errorf("Speed can't be more than height, It's super lift")
+		return nil, fmt.Errorf("speed can't be more than height, it's super lift")
 	}
 
 	return &Lift{
@@ -98,4 +98,9 @@ func (l *Lift) sendInfo(state, floor int, isMoveUp bool) {
 
 	<-l.lockCh
 }
+
+func main()  {
+
+	}
+
 
